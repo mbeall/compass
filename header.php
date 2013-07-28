@@ -41,26 +41,26 @@
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=<?php echo $fb_app_id; ?>";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<div id="page" class="hfeed site container-fluid">
+<div id="page" class="hfeed site container">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
     
     <?php if (current_theme_supports('custom-header')) { ?>
           
 		
-        <hgroup class="row-fluid">
+        <hgroup class="row">
 	
         	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
             	<?php $header_image = get_header_image();
 		if ( ! empty( $header_image ) ) { ?>
-            <img class="header span2 visible-desktop" src="<?php header_image(); ?>" alt="" />
+            <img class="header col-lg-2 visible-lg" src="<?php header_image(); ?>" alt="" />
         <?php } // if ( ! empty( $header_image ) ) ?>
             </a>
             
         <?php if (display_header_text()) { ?>
-        	<div class="bastard-title span10">
-                <h1 class="site-title hidden-phone"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" ><?php bloginfo( 'name' ); ?></a></h1>
-                <h2 class="site-description visible-desktop"><?php bloginfo( 'description' ); ?></h2>
+        	<div class="bastard-title col-lg-10">
+                <h1 class="site-title hidden-sm"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" ><?php bloginfo( 'name' ); ?></a></h1>
+                <h2 class="site-description visible-lg"><?php bloginfo( 'description' ); ?></h2>
             </div>
         <?php } ?>
         
@@ -73,8 +73,8 @@
             	<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
             </a>
 	        <div class="bastard-title">
-                <h1 class="site-title hidden-phone"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" ><?php bloginfo( 'name' ); ?></a></h1>
-                <h2 class="site-description visible-desktop"><?php bloginfo( 'description' ); ?></h2>
+                <h1 class="site-title hidden-sm"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" ><?php bloginfo( 'name' ); ?></a></h1>
+                <h2 class="site-description visible-lg"><?php bloginfo( 'description' ); ?></h2>
             </div>
 		</hgroup>
         
@@ -98,7 +98,7 @@
                     
                     <div class="nav-collapse collapse">
 			<?php wp_nav_menu( array( 'menu_class' => 'nav', 'container' => false, 'theme_location' => 'primary', 'walker' => new Flint_Bootstrap_Menu ) ); ?>
-                        <form method="get" class="navbar-search pull-right visible-desktop" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+                        <form method="get" class="navbar-search pull-right visible-lg" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
                             <input type="text" class="search-query" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="Search">
                         </form>
                     </div><!-- .nav-collapse -->
@@ -107,4 +107,4 @@
         </nav><!-- .navbar -->
 	</header><!-- #masthead .site-header -->
 
-	<div id="main" class="site-main row-fluid">
+	<div id="main" class="site-main row">
