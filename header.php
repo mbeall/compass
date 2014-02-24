@@ -4,9 +4,8 @@
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package Flint
- * @sub-package Compass
- * @since Compass 0.9
+ * @package Flint\Compass
+ * @since 0.9
  */
 ?><!DOCTYPE html>
 <!--[if lt IE 9]><html <?php language_attributes(); ?> class="ie"><![endif]-->
