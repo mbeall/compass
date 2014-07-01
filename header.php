@@ -27,11 +27,11 @@
 <?php $sparks_options = get_option('sparks_options'); ?>
 <body <?php body_class(); ?>>
 <?php if (isset($sparks_options['fb_app_id'])) {
-		$fb_app_id = $sparks_options["fb_app_id"];
-	}
-	else {
-		$fb_app_id = '';
-	} ?>
+    $fb_app_id = $sparks_options["fb_app_id"];
+  }
+  else {
+    $fb_app_id = '';
+  } ?>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -41,51 +41,51 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <div id="page" class="hfeed site container">
-	<?php do_action( 'before' ); ?>
-	<header id="masthead" class="site-header" role="banner">
+  <?php do_action( 'before' ); ?>
+  <header id="masthead" class="site-header" role="banner">
     
     <?php if (current_theme_supports('custom-header')) { ?>
           
-		
+    
         <hgroup class="row">
-	
-        	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-            	<?php $header_image = get_header_image();
-		if ( ! empty( $header_image ) ) { ?>
-            <img class="header col-lg-2 visible-lg" src="<?php header_image(); ?>" alt="" />
+  
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+              <?php $header_image = get_header_image();
+    if ( ! empty( $header_image ) ) { ?>
+            <img class="header col-lg-2 visible-lg-block" src="<?php header_image(); ?>" alt="" />
         <?php } // if ( ! empty( $header_image ) ) ?>
             </a>
             
         <?php if (display_header_text()) { ?>
-        	<div class="bastard-title col-lg-10">
+          <div class="bastard-title col-lg-10">
                 <h1 class="site-title hidden-sm"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" ><?php bloginfo( 'name' ); ?></a></h1>
-                <h2 class="site-description visible-lg"><?php bloginfo( 'description' ); ?></h2>
+                <h2 class="site-description visible-lg-block"><?php bloginfo( 'description' ); ?></h2>
             </div>
         <?php } ?>
         
         </hgroup>
         
-  	<?php } else { ?>
-	
+    <?php } else { ?>
+  
         <hgroup>
-          	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-            	<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+              <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
             </a>
-	        <div class="bastard-title">
+          <div class="bastard-title">
                 <h1 class="site-title hidden-sm"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" ><?php bloginfo( 'name' ); ?></a></h1>
-                <h2 class="site-description visible-lg"><?php bloginfo( 'description' ); ?></h2>
+                <h2 class="site-description visible-lg-block"><?php bloginfo( 'description' ); ?></h2>
             </div>
-		</hgroup>
+    </hgroup>
         
-   	<?php } ?>
+     <?php } ?>
 
-	<nav role="navigation" class="navbar">
+  <nav role="navigation" class="navbar">
             <h1 class="assistive-text"><?php _e( 'Menu', 'flint' ); ?></h1>
             <div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'flint' ); ?>"><?php _e( 'Skip to content', 'flint' ); ?></a></div>
             <div class="navbar-inner">
-            	<div class="container">
+              <div class="container">
                 
-                	<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                  <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -93,17 +93,17 @@
                     </a>
                     
                     <!-- Be sure to leave the brand out there if you want it shown -->
-      				<a class="brand hidden-desktop" href="#"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></a>
+              <a class="brand hidden-desktop" href="#"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></a>
                     
                     <div class="nav-collapse collapse">
-			<?php wp_nav_menu( array( 'menu_class' => 'nav', 'container' => false, 'theme_location' => 'primary', 'walker' => new Flint_Bootstrap_Menu ) ); ?>
-                        <form method="get" class="navbar-search pull-right visible-lg" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+      <?php wp_nav_menu( array( 'menu_class' => 'nav', 'container' => false, 'theme_location' => 'primary', 'walker' => new Flint_Bootstrap_Menu ) ); ?>
+                        <form method="get" class="navbar-search dropdown-menu-right visible-lg-block" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
                             <input type="text" class="search-query" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="Search">
                         </form>
                     </div><!-- .nav-collapse -->
                 </div><!-- .container -->
             </div><!-- .navbar-inner -->
         </nav><!-- .navbar -->
-	</header><!-- #masthead .site-header -->
+  </header><!-- #masthead .site-header -->
 
-	<div id="main" class="site-main row">
+  <div id="main" class="site-main row">
