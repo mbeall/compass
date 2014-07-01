@@ -43,30 +43,30 @@
 <div id="page" class="hfeed site container">
   <?php do_action( 'before' ); ?>
   <header id="masthead" class="site-header" role="banner">
-    
+
     <?php if (current_theme_supports('custom-header')) { ?>
-          
-    
+
+
         <hgroup class="row">
-  
+
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
               <?php $header_image = get_header_image();
     if ( ! empty( $header_image ) ) { ?>
             <img class="header col-lg-2 visible-lg-block" src="<?php header_image(); ?>" alt="" />
         <?php } // if ( ! empty( $header_image ) ) ?>
             </a>
-            
+
         <?php if (display_header_text()) { ?>
           <div class="bastard-title col-lg-10">
                 <h1 class="site-title hidden-sm"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" ><?php bloginfo( 'name' ); ?></a></h1>
                 <h2 class="site-description visible-lg-block"><?php bloginfo( 'description' ); ?></h2>
             </div>
         <?php } ?>
-        
+
         </hgroup>
-        
+
     <?php } else { ?>
-  
+
         <hgroup>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
               <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
@@ -76,7 +76,7 @@
                 <h2 class="site-description visible-lg-block"><?php bloginfo( 'description' ); ?></h2>
             </div>
     </hgroup>
-        
+
      <?php } ?>
 
   <nav role="navigation" class="navbar">
@@ -84,17 +84,17 @@
             <div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'flint' ); ?>"><?php _e( 'Skip to content', 'flint' ); ?></a></div>
             <div class="navbar-inner">
               <div class="container">
-                
+
                   <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    
+
                     <!-- Be sure to leave the brand out there if you want it shown -->
               <a class="brand hidden-desktop" href="#"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></a>
-                    
+
                     <div class="nav-collapse collapse">
       <?php wp_nav_menu( array( 'menu_class' => 'nav', 'container' => false, 'theme_location' => 'primary', 'walker' => new Flint_Bootstrap_Menu ) ); ?>
                         <form method="get" class="navbar-search dropdown-menu-right visible-lg-block" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
