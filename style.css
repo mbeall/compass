@@ -6,9 +6,9 @@ Author URI:     http://starverte.com/
 Description:    Child theme for Flint; developed for CSU Hospitality Management event site.
 Template:       flint
 Version:        0.9
-License:	GPLv2 or later
-License URI:	license.txt
-Tags:		sparks
+License:  GPLv2 or later
+License URI:  license.txt
+Tags:    sparks
 
 A spark sets a fire ablaze, and similarly the Sparks Framework is made up of 'sparks' that help initiate the creative process of website development within WordPress. Often times to start a fire, a person uses flint and steel. With the Sparks Framework it is the same way. 'Flint' (the core theme) and 'Steel' (the core plugin) makeup the foundation of the framework. Then, additional child themes and plugins extend the functionality and user experience.
 
@@ -35,28 +35,28 @@ A spark sets a fire ablaze, and similarly the Sparks Framework is made up of 'sp
 
 a,
 a:visited {
-	color: #ca982b;
+  color: #ca982b;
 }
 
 .contact-form input[type="text"], .contact-form input[type="email"] {
-	width: 90%;
+  width: 90%;
 }
 .contact-form input[type="text"], input[type="email"], textarea {
-	float: none;
+  float: none;
 }
 .logo {
-	max-height: 150px;
-	float: left;
-	margin-right: 1em;
+  max-height: 150px;
+  float: left;
+  margin-right: 1em;
 }
 .site-title span {
-	position: relative;
-	top: 54px;
+  position: relative;
+  top: 54px;
 }
 ::selection{
-	background: #272361;
-	color: #fff;
+  background: #272361;
+  color: #fff;
 }
 .menu-toggle{
-	color: #ca982b;
+  color: #ca982b;
 }
